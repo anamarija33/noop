@@ -4,16 +4,19 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
-public class SaveToTextFile implements SaveDataStrategy {
+public class SaveToTextFile implements SaveDataStrategy<String> {
+
     @Override
-    public <E> void saveDataToFile(String filePath, java.util.List<E> data) {
+    public void saveDataToFile(String filePath, List<String> data) {
         File newFile = new File(filePath);
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(newFile))) {
-            for (E e : data) {
-                bw.write((String)e);
+            for (String e : data) {
+                bw.write(e);
                 bw.newLine();
             }
+            System.out.println("Data saved to file: " + filePath);
         } catch (IOException e) {
             e.printStackTrace();
         }
