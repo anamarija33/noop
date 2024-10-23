@@ -1,6 +1,7 @@
 package pckg_gui_calculator;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MainFrame extends JFrame {
     private ViewPanel viewPanel;
@@ -25,7 +26,9 @@ public class MainFrame extends JFrame {
     }
 
     private void layoutComps() {
-
+        setLayout(new BorderLayout());
+        add(viewPanel, BorderLayout.CENTER);
+        add(formPanel, BorderLayout.SOUTH);
     }
 
     private void activateMainFrame() {
