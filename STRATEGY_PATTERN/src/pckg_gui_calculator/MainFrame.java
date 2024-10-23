@@ -32,7 +32,12 @@ public class MainFrame extends JFrame {
     }
 
     private void activateMainFrame() {
-
+        formPanel.setFormPanelListener(new FormPanelListener() {
+            @Override
+            public void formPanelEventOccurred(CalculationFormData calculationFormData) {
+                viewPanel.appendText(calculationFormData.toString());
+            }
+        });
     }
 
 

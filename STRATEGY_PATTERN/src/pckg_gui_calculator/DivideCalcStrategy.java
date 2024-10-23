@@ -10,4 +10,9 @@ public class DivideCalcStrategy implements CalculationStrategy {
             return fstNum / sndNum;
         }
     }
+
+    @Override
+    public String toString() {
+        return "DivideCalcStrategy";
+    }
 }

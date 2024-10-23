@@ -14,7 +14,9 @@ public class ViewPanel extends JPanel {
         setLayout(new BorderLayout());
         add(scrollPane, BorderLayout.CENTER);
 
-
     }
 
+    public void appendText(String string) {
+        textArea.append(string + "\n");
+    }
 }

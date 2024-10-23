@@ -2,7 +2,10 @@ package pckg_gui_calculator;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.text.View;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FormPanel extends JPanel {
     private JTextField fstNumField;
@@ -10,9 +13,12 @@ public class FormPanel extends JPanel {
     private JTextField resultField;
     private JComboBox<CalculationStrategy> operationBox;
     private JButton confirmButton;
+    private FormPanelListener formPanelListener;
+
 
 
     public FormPanel() {
+
         Dimension dims = this.getPreferredSize();
         dims.height = 220;
         this.setPreferredSize(dims);
@@ -93,7 +99,38 @@ public class FormPanel extends JPanel {
         add(resultField, gc);
     }
 
+    public void setFormPanelListener(FormPanelListener formPanelListener) {
+        this.formPanelListener = formPanelListener;
+    }
+
     private void activateFormPanel() {
+        confirmButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("test for button activation");
+                double fst = Double.parseDouble(fstNumField.getText());
+                double snd = Double.parseDouble(sndNumField.getText());
+                CalculationStrategy calculationStrategy = (CalculationStrategy) operationBox.getSelectedItem();
+                double result = calculationStrategy.performCalculations(fst, snd);
+                resultField.setText(String.valueOf(result));
+                CalculationFormData calculationFormData = new CalculationFormData(fst, snd, result, calculationStrategy);
+
+                if (formPanelListener != null) {
+                    formPanelListener.formPanelEventOccurred(calculationFormData);
+                    resetForm();
+                }
+
+
+            }
+        });
+    }
+
+    private void resetForm() {
+        this.fstNumField.setText("");
+        this.sndNumField.setText("");
+        this.resultField.setEnabled(false);
+        fstNumField.requestFocus();
+        this.operationBox.setSelectedIndex(-1);
 
     }
 }
