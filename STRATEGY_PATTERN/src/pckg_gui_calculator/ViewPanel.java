@@ -13,10 +13,14 @@ public class ViewPanel extends JPanel {
         scrollPane = new JScrollPane(textArea, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         setLayout(new BorderLayout());
         add(scrollPane, BorderLayout.CENTER);
-
     }
 
     public void appendText(String string) {
         textArea.append(string + "\n");
+    }
+
+    public void clearTextArea() {
+        textArea.selectAll();
+        textArea.replaceSelection(null);
     }
 }

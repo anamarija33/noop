@@ -12,12 +12,12 @@ public class ToolBar extends JPanel implements ActionListener {
     private JButton loadText;
     private JButton loadObjects;
     private JButton clearAll;
+    private ToolbarListener toolbarListener;
 
     public ToolBar() {
         initComps();
         layoutComps();
         activateToolbar();
-
     }
 
     private void activateToolbar() {
@@ -54,7 +54,33 @@ public class ToolBar extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == saveAsText) {
+            System.out.println("Clicked: " + saveAsText.getActionCommand());
+            if (toolbarListener != null) {
+                toolbarListener.toolbarEventOccured(saveAsText.getActionCommand());
+            }
+        }
+        if(ae.getSource() == saveObjects) {
+            System.out.println("Clicked: " + saveObjects.getActionCommand());
+        }
+        if (ae.getSource() == loadText) {
+            if (toolbarListener != null) {
+                toolbarListener.toolbarEventOccured(loadText.getActionCommand());
+            }
+        }
+        if (ae.getSource() == loadObjects) {
+            System.out.println("Clicked: " + loadObjects.getActionCommand());
+        }
+       if (ae.getSource() == clearAll) {
+            System.out.println("Clicked: " + clearAll.getActionCommand());
+            if (toolbarListener != null) {
+                toolbarListener.toolbarEventOccured(clearAll.getActionCommand());
+            }
+        }
 
+    }
 
+    public void setToolbarListener(ToolbarListener toolbarListener) {
+        this.toolbarListener = toolbarListener;
     }
 }
