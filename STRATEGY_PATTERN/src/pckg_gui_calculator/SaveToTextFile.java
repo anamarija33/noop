@@ -13,6 +13,7 @@ public class SaveToTextFile implements SaveDataStrategy<String> {
         File newFile = new File(filePath);
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(newFile))) {
             for (String e : data) {
+                System.out.println(e);
                 bw.write(e);
                 bw.newLine();
             }

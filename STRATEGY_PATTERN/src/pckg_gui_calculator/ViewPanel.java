@@ -16,7 +16,14 @@ public class ViewPanel extends JPanel {
 
     }
 
+    public String[] getTextArea() {
+        return textArea.getText().split("\n");
+    }
+
     public void appendText(String string) {
         textArea.append(string + "\n");
+    }
+    public void clearTextArea() {
+        textArea.setText("");
     }
 }
