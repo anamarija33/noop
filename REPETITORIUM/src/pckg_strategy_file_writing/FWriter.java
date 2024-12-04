@@ -13,14 +13,14 @@ import static java.nio.file.StandardOpenOption.APPEND;
 public class FWriter implements WriteStrategy{
     @Override
     public void writeToFile(String content, String filePath) {
-       String[] lines = content.split("\n");
-        LinkedList<String> list = new LinkedList<>();
-        list.addAll(new ArrayList<>(List.of(lines)));
-        try(Files.write(Path.of(filePath),list,APPEND)) {
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-
-
-        }
+//       String[] lines = content.split("\n");
+//        LinkedList<String> list = new LinkedList<>();
+//        list.addAll(new ArrayList<>(List.of(lines)));
+//        try(Files.write(Path.of(filePath),list,APPEND)) {
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//
+//
+//        }
     }
 }
