@@ -7,7 +7,7 @@ public class Test2dDrawing {
         circle.drawShape();
         ShapeFillColorDecorator shapeFillColorDecorator = new ShapeFillColorDecorator(circle, SHAPECOLOR.Yellow);
         shapeFillColorDecorator.drawShape();
-        System.out.println(shapeFillColorDecorator);
+//        System.out.println(shapeFillColorDecorator);
         ShapeLineColorDecorator shapeLineColorDecorator = new ShapeLineColorDecorator(shapeFillColorDecorator, SHAPECOLOR.Red);
 
         shapeLineColorDecorator.drawShape();
