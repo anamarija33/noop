@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ADITIONAL/ADITIONAL.iml" filepath="$PROJECT_DIR$/ADITIONAL/ADITIONAL.iml" />
       <module fileurl="file://$PROJECT_DIR$/Command/Command.iml" filepath="$PROJECT_DIR$/Command/Command.iml" />
       <module fileurl="file://$PROJECT_DIR$/DECORATOR/DECORATOR.iml" filepath="$PROJECT_DIR$/DECORATOR/DECORATOR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DesignPrinciples.iml" filepath="$PROJECT_DIR$/DesignPrinciples.iml" />
       <module fileurl="file://$PROJECT_DIR$/FACTORY/FACTORY.iml" filepath="$PROJECT_DIR$/FACTORY/FACTORY.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA_GENERICS/JAVA_GENERICS.iml" filepath="$PROJECT_DIR$/JAVA_GENERICS/JAVA_GENERICS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Observer/Observer.iml" filepath="$PROJECT_DIR$/Observer/Observer.iml" />
