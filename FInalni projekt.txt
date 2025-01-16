@@ -1,0 +1,34 @@
+FInalni projekt
+(2 dana prije prijave)
+- rješenja svih vježbi -> jedna more falit
+- kratki testovi položeni
+
+nakon ispita - obrana završnog projekta
+
+1.1 završni projekt -> odobren koncept - tri dana prije redovitog termina (?24.01)
+obrana završnog projekta - u terminu usmenog (merlin)
+
+Minimum (za 2):{ MVC s bazom podataka (menubar, toolbar, viewpanel, tablepanel, event driven programming) - ne može biti primjer
+    s predavanja ili vježbi
+    upravljanje zavisnostima - Maven
+
+    - github, triba imat commitova
+
+    - dodatno uz projekt(uz funkcionalan kod):
+    1. Javadoc - API - chatgpt, odma dokumentirati nakon ispitivanja funkcionalnosti metoda, metoda koja baca exception, u dokumentaciji
+    triba pisat da baca exception
+    2. projektna dokumentacija - pdf, word ili markdown (mora bit u repozitoriju na githubu)
+    dijagram klasa
+    opis predložaka
+    vanjske biblioteke
+    na koji način smo upravljali zavisnostima
+    opis kako se koristi aplikacija (ako je potrebno)
+    }
+
+primjeri: igra potapanja brodova,
+
+
+ORM - za 5
+
+
+
